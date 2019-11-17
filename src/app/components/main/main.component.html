@@ -1,0 +1,80 @@
+<div fxFlexFill fxLayout="column">
+  <mat-toolbar color="primary">
+    <button mat-icon-button>
+      <mat-icon>attach_money</mat-icon>
+    </button>
+    <span>Expense Control Portal</span>
+  </mat-toolbar>
+
+  <nav>
+    <a>
+      <button mat-button color="primary" [routerLink]="'/'">
+        <mat-icon>house</mat-icon>
+        Dashboard
+      </button>
+    </a>
+    <a>
+      <button mat-button color="primary" [routerLink]="'/app/products/products-list'">
+        <mat-icon>fastfood</mat-icon>
+        Products
+      </button>
+      <!--<mat-menu #productsMenu="matMenu">
+          <button mat-menu-item [routerLink]="'/app/products/products-list'">
+              <mat-icon>format_list_bulleted</mat-icon>
+              List Produts
+          </button>
+          <button mat-menu-item [routerLink]="'/app/products/products-add'">
+              <mat-icon>add_circle</mat-icon>
+              Add Products
+          </button>
+      </mat-menu>-->
+    </a>
+    <a>
+      <button mat-button color="primary" [routerLink]="'/app/refunds/refunds-list'">
+        <mat-icon>reply</mat-icon>
+        Refunds
+      </button>
+      <!--<mat-menu #refundsMenu="matMenu">
+          <button mat-menu-item [routerLink]="'/app/refunds/refunds-list'">
+              <mat-icon>format_list_bulleted</mat-icon>
+              List Refunds
+          </button>
+          <button mat-menu-item [routerLink]="'/app/refunds/refunds-add'">
+              <mat-icon>add_circle</mat-icon>
+              Add Refunds
+          </button>
+      </mat-menu>-->
+    </a>
+    <a>
+      <button mat-button color="primary" [routerLink]="'/app/markets/markets-list'">
+        <mat-icon>add_shopping_cart</mat-icon>
+        Market
+      </button>
+      <!--<mat-menu #marketsMenu="matMenu">
+          <button mat-menu-item [routerLink]="'/app/markets/markets-list'">
+              <mat-icon>format_list_bulleted</mat-icon>
+              List Markets
+          </button>
+          <button mat-menu-item [routerLink]="'/app/markets/markets'">
+              <mat-icon>add_circle</mat-icon>
+              Add Markets
+          </button>
+      </mat-menu>-->
+    </a>
+
+
+  </nav>
+
+  <div fxLayout="column" fxFlex>
+    <div fxFlex style="margin: 1%">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- <footer fxLayout="column">
+        <div fxLayout="row">
+            <hr fxFlex="100">
+        </div>
+        <p fxFlexAlign="center">Copyright @ 2019 Expense Control Portal</p>
+    </footer> -->
+  </div>
+</div>

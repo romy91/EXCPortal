@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <span>Refund's Details</span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabindex="-1">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-grid-list cols="1" rowHeight="300px">
+  <mat-grid-tile>
+    <div *ngIf="refund" class="controles-container">
+
+      <mat-list role="list">
+        <mat-list-item role="listitem"><label><b>Refund Name: </b></label> &nbsp; {{refund.name}}</mat-list-item>
+        <mat-list-item role="listitem"><label><b>Refund Amount: </b></label> &nbsp; {{refund.amount | currency:'U$'}}
+        </mat-list-item>
+        <mat-list-item role="listitem"><label><b>Refund Remaining Amount: </b></label>
+          &nbsp; {{refund.remaining_amount | currency:'U$'}}
+        </mat-list-item>
+        <mat-list-item role="listitem"><label><b>Refund Installments: </b></label> &nbsp; {{refund.installments}}
+        </mat-list-item>
+        <mat-list-item role="listitem"><label><b>Refund Remaining Installments: </b></label>
+          &nbsp; {{refund.remaining_installments}}
+        </mat-list-item>
+        <mat-list-item role="listitem"><label><b>Refund Description: </b></label> &nbsp; {{refund.description}}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

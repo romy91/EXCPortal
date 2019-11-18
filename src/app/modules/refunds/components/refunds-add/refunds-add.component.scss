@@ -1,0 +1,32 @@
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.button-left {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.btn-space {
+  margin-right: 5px;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+
+.flexbox-container {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexbox-container > div {
+  width: 50%;
+  padding: 10px;
+}
+
+.flexbox-container > div:first-child {
+  margin-right: 20px;
+}

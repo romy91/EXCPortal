@@ -1,0 +1,62 @@
+<mat-toolbar color="primary">
+  <span>{{ groupFormMarket.controls['id'].value ? "Modify Market" : "New Market" }}</span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabindex="-1">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+
+<form [formGroup]="groupFormMarket" class="normal-form">
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <div class="controles-container">
+
+        <input type="hidden" formControlName="id">
+
+        <mat-form-field>
+          <mat-select formControlName="type" placeholder="Select type *">
+            <mat-option>None</mat-option>
+            <ng-container *ngFor="let type of types">
+              <mat-option value="{{ type.id }}">{{ type.name }}</mat-option>
+            </ng-container>
+          </mat-select>
+          <mat-error>This field is mandatory</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput formControlName="place" placeholder="Type place *">
+          <mat-error>This field is mandatory</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput formControlName="amount" placeholder="Type amount *">
+          <span matPrefix>$&nbsp;</span>
+          <mat-error>This field is mandatory</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="controles-container">
+        <mat-form-field>
+          <input matInput formControlName="date" [matDatepicker]="picker" placeholder="Select market date *">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error>This field is mandatory</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput formControlName="description" placeholder="Type description"></textarea>
+          <mat-error>This field is mandatory</mat-error>
+        </mat-form-field>
+        <div class="button-row">
+          <button mat-raised-button color="primary" [disabled]="groupFormMarket.invalid"
+                  (click)="onSubmit()">Submit
+          </button>
+          <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</form>

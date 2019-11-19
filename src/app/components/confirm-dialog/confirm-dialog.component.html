@@ -1,13 +1,14 @@
 <mat-toolbar color="primary">
   <span>Delete Row</span>
   <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="closeDialog()" tabindex="-1">
+    <mat-icon>clear</mat-icon>
+  </button>
 </mat-toolbar>
 
-<!--<h1 mat-dialog-title class="text-center">Delete Row</h1>-->
-<div mat-dialog-content class="text-center" style="margin-top: 10px;">
-  {{ data.message }}
-</div>
-<div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="false">NO</button>
-  <button mat-button cdkFocusInitial color="warn" [mat-dialog-close]="true">YES</button>
+<h1 mat-dialog-title class="text-center" style="margin-top: 20px;">{{ data.message }}</h1>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button [mat-dialog-close]="false">NO</button>
+  <button mat-raised-button cdkFocusInitial color="warn" [mat-dialog-close]="true">YES
+  </button>
 </div>

@@ -5,6 +5,7 @@ import {NotificationService} from '../../../../services/notifications/notificati
 import {DialogServiceService} from 'src/app/services/notifications/dialog-service.service';
 import {MarketsComponent} from '../markets/markets.component';
 import {MarketsDetailsComponent} from '../markets-details/markets-details.component';
+import {Market} from '../../model/market';
 
 @Component({
   selector: 'app-markets-list',
@@ -13,8 +14,9 @@ import {MarketsDetailsComponent} from '../markets-details/markets-details.compon
 })
 export class MarketsListComponent implements OnInit {
 
+  markets: Market[];
   listData: MatTableDataSource<any>;
-  displayedColumns: string[] = ['type', 'place', 'amount', 'date', 'description', 'actions'];
+  displayedColumns: string[] = ['description', 'place', 'amount', 'date', 'type', 'actions'];
   searchKey: string;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;

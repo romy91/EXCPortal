@@ -44,7 +44,6 @@ export class MarketsComponent implements OnInit {
   }
 
   ngOnInit() {
-    /* this.marketService.getMarketList(); */
     this.populateForm(this.data);
   }
 

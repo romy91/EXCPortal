@@ -11,14 +11,15 @@
     <div *ngIf="market" class="controles-container">
 
       <mat-list role="list">
-        <mat-list-item role="listitem"><label><b>Market Type: </b></label> &nbsp; {{market.type}}</mat-list-item>
+
+        <mat-list-item role="listitem"><label><b>Market Description: </b></label> &nbsp; {{market.description}}
+        </mat-list-item>
         <mat-list-item role="listitem"><label><b>Market Place: </b></label> &nbsp; {{market.place}}</mat-list-item>
         <mat-list-item role="listitem"><label><b>Market Amount: </b></label> &nbsp; {{market.amount | currency:'U$'}}
         </mat-list-item>
         <mat-list-item role="listitem"><label><b>Market Date: </b></label> &nbsp; {{market.date | date: 'fullDate'}}
         </mat-list-item>
-        <mat-list-item role="listitem"><label><b>Market Description: </b></label> &nbsp; {{market.description}}
-        </mat-list-item>
+        <mat-list-item role="listitem"><label><b>Market Type: </b></label> &nbsp; {{market.type}}</mat-list-item>
       </mat-list>
     </div>
   </mat-grid-tile>

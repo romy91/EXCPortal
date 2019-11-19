@@ -1,3 +1,8 @@
+<mat-list>
+  <mat-list-item>Market</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
 <div class="search-div">
   <button mat-raised-button (click)="onCreate()" color="primary">
     <mat-icon>add_circle</mat-icon>&nbsp;Add
@@ -36,13 +41,13 @@
       <mat-header-cell *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let row">
         <button mat-icon-button (click)="onEdit(row)" matTooltip="Edit Market">
-          <mat-icon>create</mat-icon>
+          <mat-icon>loop</mat-icon>
         </button>
         <button mat-icon-button (click)="onDetails(row)" matTooltip="Market's Details">
-          <mat-icon>visibility</mat-icon>
+          <mat-icon>zoom_in</mat-icon>
         </button>
         <button mat-icon-button color="warn" (click)="onDelete(row.id)" matTooltip="Delete Market">
-          <mat-icon>delete</mat-icon>
+          <mat-icon>delete_outline</mat-icon>
         </button>
       </mat-cell>
     </ng-container>

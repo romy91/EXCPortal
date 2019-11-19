@@ -53,7 +53,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatNativeDateModule,
     MatSnackBarModule,
     MatSortModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule
   ],
   exports: [
     MatToolbarModule,
@@ -80,7 +81,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatSnackBarModule,
     MatSortModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule
   ]
 })
 export class MaterialModule {

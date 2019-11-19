@@ -15,6 +15,7 @@ import {Market} from '../../model/market';
 export class MarketsListComponent implements OnInit {
 
   markets: Market[];
+  totalMarket: number;
   listData: MatTableDataSource<any>;
   displayedColumns: string[] = ['description', 'place', 'amount', 'date', 'type', 'actions'];
   searchKey: string;
@@ -30,7 +31,25 @@ export class MarketsListComponent implements OnInit {
 
   ngOnInit() {
     this.loadData();
+    /*this.getListMarketForTotalSum();
+    this.totalSum();*/
   }
+
+  /*getListMarketForTotalSum() {
+    this.marketService.getMarketList()
+      .subscribe(data => {
+          this.markets = data;
+        },
+        error => console.log(error));
+  }
+
+  totalSum() {
+    this.totalMarket = this.markets.reduce((
+      acc,
+      obj,
+    ) => acc + (obj.amount), 0);
+    console.log('Total: ', this.totalMarket);
+  }*/
 
   loadData() {
     this.marketService.getMarketList()

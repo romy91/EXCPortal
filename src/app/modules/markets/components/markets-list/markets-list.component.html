@@ -1,6 +1,8 @@
 <mat-list>
-  <mat-list-item>Market</mat-list-item>
-  <mat-divider></mat-divider>
+  <mat-list-item>
+    <mat-icon color="primary" mat-list-icon>shopping_cart</mat-icon>
+    <h2 mat-line>Markets Module</h2>
+  </mat-list-item>
 </mat-list>
 
 <div class="search-div">
@@ -28,6 +30,7 @@
     <ng-container matColumnDef="amount">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Amount Market</mat-header-cell>
       <mat-cell *matCellDef="let element">{{ element.amount | currency:'U$' }}</mat-cell>
+      <!--<mat-footer-cell *matFooterCellDef> {{totalSum() | currency}} </mat-footer-cell>-->
     </ng-container>
     <ng-container matColumnDef="date">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Date Market</mat-header-cell>
@@ -36,6 +39,7 @@
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Description Market</mat-header-cell>
       <mat-cell *matCellDef="let element">{{ element.description }}</mat-cell>
+      <mat-footer-cell *matFooterCellDef> Total</mat-footer-cell>
     </ng-container>
     <ng-container matColumnDef="actions">
       <mat-header-cell *matHeaderCellDef></mat-header-cell>
